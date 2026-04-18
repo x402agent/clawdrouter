@@ -1,0 +1,52 @@
+{
+  "name": "solana-clawd",
+  "version": "1.8.0",
+  "description": "One-shot agent minting CLI for the Solana Clawd terminal. Pair a wallet, mint a Metaplex Core agent NFT.",
+  "bin": {
+    "solana-clawd": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "solana",
+    "metaplex",
+    "agent",
+    "nft",
+    "mint",
+    "clawd",
+    "cli",
+    "a2a",
+    "eip-8004"
+  ],
+  "author": "x402agent",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x402agent/clawdrouter.git",
+    "directory": "cli"
+  },
+  "homepage": "https://github.com/x402agent/clawdrouter#readme",
+  "bugs": {
+    "url": "https://github.com/x402agent/clawdrouter/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
